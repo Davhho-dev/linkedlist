@@ -39,11 +39,21 @@ function LinkedList() {
         return head
     }
 
+    const tailNode = () => {
+        let tail = head
+        if(head === null) return null
+        while (tail.next !== null) {
+            tail = tail.next
+        }
+        return tail
+    }
+
     return {
         append,
         prepend,
         size,
-        headNode
+        headNode,
+        tailNode
     }
 }
 

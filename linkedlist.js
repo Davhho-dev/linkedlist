@@ -48,12 +48,37 @@ function LinkedList() {
         return tail
     }
 
+    const at = (index) => {
+        let pointer = head;
+        if (index > (count - 1)) return null
+        else {
+            for(let i = 0; i < index; i++) {
+                pointer = pointer.next
+            }
+            return pointer
+        }
+    }
+
+    const pop = () => {
+        count--
+        let pointer = head
+        let current = pointer
+        while (pointer.next !== null) {
+            current = pointer
+            pointer = pointer.next
+        }
+        current.next = null
+        return pointer
+    }
+
     return {
         append,
         prepend,
         size,
         headNode,
-        tailNode
+        tailNode,
+        at,
+        pop
     }
 }
 

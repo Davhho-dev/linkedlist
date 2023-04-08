@@ -81,6 +81,19 @@ function LinkedList() {
         return false
     }
 
+    const find = (value) => {
+        let index = 0
+        let pointer = head
+        while (pointer !== null) {
+            if (pointer.value === value) return index
+            else {
+                pointer = pointer.next
+                index++
+            }
+        }
+        return null
+    }
+
     return {
         append,
         prepend,
@@ -89,7 +102,8 @@ function LinkedList() {
         tailNode,
         at,
         pop,
-        contains
+        contains,
+        find
     }
 }
 

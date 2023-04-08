@@ -1,4 +1,4 @@
-const Node = (data) => {
+function Node (data) {
     return {
         value: data,
         next: null

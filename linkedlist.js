@@ -94,6 +94,23 @@ function LinkedList() {
         return null
     }
 
+    const insertAt = (value, index) => {
+        const node = new Node (value)
+        if (head === null || index === 0) prepend(value)
+        else if (index > (count - 1)) append(value)
+        else {
+            let current;
+            let pointer = head
+            for(let i = 0; i < index; i++) {
+                current = pointer
+                pointer = pointer.next
+            }
+            current.next = node
+            current.next.next = pointer
+        }
+        return head
+    }
+
     return {
         append,
         prepend,
@@ -103,7 +120,8 @@ function LinkedList() {
         at,
         pop,
         contains,
-        find
+        find,
+        insertAt
     }
 }
 

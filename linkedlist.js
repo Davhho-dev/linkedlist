@@ -60,6 +60,7 @@ function LinkedList() {
     }
 
     const pop = () => {
+        if(head === null) return null
         count--
         let pointer = head
         let current = pointer
@@ -71,6 +72,15 @@ function LinkedList() {
         return pointer
     }
 
+    const contains = (value) => {
+        let pointer = head;
+        while (pointer !== null) {
+            if (pointer.value === value) return true
+            else pointer = pointer.next
+        }
+        return false
+    }
+
     return {
         append,
         prepend,
@@ -78,7 +88,8 @@ function LinkedList() {
         headNode,
         tailNode,
         at,
-        pop
+        pop,
+        contains
     }
 }
 

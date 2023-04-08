@@ -14,7 +14,6 @@ function LinkedList() {
                 pointer = pointer.next
             }
             pointer.next = node
-            return node
         }
     }
 
@@ -27,7 +26,6 @@ function LinkedList() {
             let temp = head
             head = node
             node.next = temp
-            return head
         }
     }
 
@@ -69,7 +67,6 @@ function LinkedList() {
             pointer = pointer.next
         }
         current.next = null
-        return pointer
     }
 
     const contains = (value) => {
@@ -121,7 +118,6 @@ function LinkedList() {
             current.next = node
             current.next.next = pointer
         }
-        return head
     }
 
     const removeAt = (index) => {
@@ -138,7 +134,6 @@ function LinkedList() {
             }
             current.next = nextNode.next
         }
-        return head
     }
 
     return {

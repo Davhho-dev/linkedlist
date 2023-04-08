@@ -35,10 +35,15 @@ function LinkedList() {
         return count
     }
 
+    const headNode = () => {
+        return head
+    }
+
     return {
         append,
         prepend,
-        size
+        size,
+        headNode
     }
 }
 

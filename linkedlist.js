@@ -94,6 +94,18 @@ function LinkedList() {
         return null
     }
 
+    const toString = () => {
+        let str = ""
+        let current = head
+        if (current === null) return null
+        while (current.next !== null) {
+            str += `( ${current.value} ) -> `
+            current = current.next
+        }
+        str += `( ${current.value} ) -> ( ${current.next} )`
+        return str
+    }
+
     const insertAt = (value, index) => {
         count++
         const node = new Node (value)
@@ -139,6 +151,7 @@ function LinkedList() {
         pop,
         contains,
         find,
+        toString,
         insertAt,
         removeAt
     }

@@ -95,6 +95,7 @@ function LinkedList() {
     }
 
     const insertAt = (value, index) => {
+        count++
         const node = new Node (value)
         if (head === null || index === 0) prepend(value)
         else if (index > (count - 1)) append(value)
@@ -111,6 +112,23 @@ function LinkedList() {
         return head
     }
 
+    const removeAt = (index) => {
+        if (head === null) return null
+        count--
+        if(index > (count - 1)) return pop()
+        if(index === 0) return (head = head.next)
+        else {
+            let current = head
+            let nextNode = current
+            for(let i = 0; i < index; i++) {
+                current = nextNode
+                nextNode = nextNode.next
+            }
+            current.next = nextNode.next
+        }
+        return head
+    }
+
     return {
         append,
         prepend,
@@ -121,7 +139,8 @@ function LinkedList() {
         pop,
         contains,
         find,
-        insertAt
+        insertAt,
+        removeAt
     }
 }
 

@@ -1,0 +1,22 @@
+{
+  "name": "linkedlist",
+  "version": "1.0.0",
+  "description": "Linked List",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davhho-dev/linkedlist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davhho-dev/linkedlist/issues"
+  },
+  "homepage": "https://github.com/Davhho-dev/linkedlist#readme"
+}
